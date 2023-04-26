@@ -6,12 +6,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+::selection {
+  background-color: var(--mainColor);
+  color: var(--darkColor); 
+}
 :root {
   --transperWhite: rgba(255, 255, 255, 0.082);
   --darkColor: #1A1A1A;
   --whitish: #F4F2ED;
   --mainColor: #CEBD63;
   --linkSize: 14px;
+  --marginAuto: 96%; 
 }
 html {
   width: 100%;
@@ -49,7 +54,7 @@ button {
   font-family: "Chillax";
   color: var(--whitish);
   opacity: .8;
-  font-size: 1.65rem;
+  font-size: 1.6rem;
   transition: all .3s ease;
   font-weight: 100;
   font-feature-settings: normal;
@@ -102,3 +107,121 @@ button {
     display: block;
   }
 } 
+/* v2.0.0 */
+.container {
+  position: relative; 
+  max-width: var(--marginAuto);
+  margin: 0 auto;
+}
+.container-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 1rem;
+}
+.container-left img {
+  width: 100%;
+}
+.container-right {
+  background-color: var(--transperWhite);
+  position: relative;
+  border-radius: 16px;
+  padding: 0 2rem;
+}
+.container-left {
+  position: relative;
+}
+.container-absolute {
+  position: absolute;
+  bottom: 10%;
+}
+.absolute-title {
+  color: var(--whitish);
+    font-size: 3.5rem;
+    font-family: "Chillax";
+    text-transform: uppercase;
+}
+.sm-title {
+  margin-top: 4rem;
+  color: #f4f2ed;
+}
+.absolute-text {
+  color: #f4f2edb9;
+  font-size: 1.25rem;
+  font-family: "Chillax L";
+  max-width: 72%;
+  line-height: 1.5;
+  margin: 2rem 0 4rem 0;
+} 
+.arrow-svg {
+  background-color: var(--transperWhite);
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid #f7f6f4af;
+  padding: 1rem 1.03rem;
+  margin-right: 1rem;
+} 
+.story-btn {
+    color: #f4f2ed; 
+    opacity: .8;
+    display: flex;
+    align-items: center;
+}
+.story-btn:hover {
+  opacity: 1;
+}
+@media (max-width: 1550px) {
+  .absolute-title {
+    font-size: 3rem;
+  }
+  .absolute-text {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1375px) {
+  .absolute-title {
+    padding: 0 5rem 0 0;
+  }
+}
+@media (max-width: 1235px) {
+  .sm-title {
+    display: none;
+  }
+}
+@media (max-width: 1080px) {
+  .absolute-title {
+    font-size: 1.7rem;
+  }
+  .absolute-text {
+    margin: 2rem 0 3rem 0;
+  }
+} 
+@media (max-width: 890px) {
+  .container-top {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .container-absolute {
+    position: initial;
+  }
+  .absolute-title {
+    padding: 0 2rem 0 0;
+    line-height: 1.2;
+  }
+  .container-left {
+    grid-column: 1/3;
+  }
+  .container-right {
+    grid-column: 1/3;
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .container-right .absolute-text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 300px) {
+  .absolute-title {
+    font-size: 1.4rem;
+  }
+}
