@@ -41,8 +41,9 @@ button {
 }
 /* v1.0.0 */ 
 .header {
-  width: 100%;
-  overflow: hidden;
+  z-index: 1;
+  position: fixed;
+  width: 100%; 
 }
 .nav {
   display: flex;
@@ -126,8 +127,10 @@ button {
   position: relative;
   border-radius: 16px;
   padding: 0 2rem;
+  margin-top: 5.5rem;
 }
 .container-left {
+  margin-top: 5.5rem;
   position: relative;
 }
 .container-absolute {
@@ -195,6 +198,14 @@ button {
     margin: 2rem 0 3rem 0;
   }
 } 
+@media (max-width: 992px) {
+  .container-left {
+    margin-top: 6.5rem;
+  }
+  .container-right {
+    margin-top: 6.5rem;
+  }
+}
 @media (max-width: 890px) {
   .container-top {
     max-width: 95%;
@@ -208,10 +219,12 @@ button {
     line-height: 1.2;
   }
   .container-left {
+    margin-top: 6.5rem;
     grid-column: 1/3;
   }
   .container-right {
     grid-column: 1/3;
+    margin-top: 0;
     padding: 4rem 2rem;
   }
 }
@@ -226,3 +239,51 @@ button {
   }
 }
 /* v3.0.0 */
+.card {
+  max-width: var(--marginAuto);
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.card-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  text-align: center;
+  grid-gap: 3.5rem;
+}
+.card-text {
+  color: #f4f2ed9d;
+  font-size: 14px;
+  font-family: "Chillax L";
+}
+.card-title {
+  font-size: 4rem;
+  color: var(--whitish);
+  margin-top: 1rem;
+  font-family: "Chillax";
+}
+@media (max-width: 1610px) {
+  .card-top {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+@media (max-width: 1350px) {
+  .card-top {
+    grid-template-columns: repeat(auto-fill, minmax(254px, 1fr));
+  } 
+}
+@media (max-width: 700px) {
+    .card-top {
+        grid-gap: 2rem;
+    }
+    .card-title {
+      font-size: 3rem;
+    }
+    .card {
+      max-width: 92%;
+    }
+}
+@media (max-width: 400px) {
+  .card-top {
+    grid-template-columns: repeat(auto-fill, minmax(153px, 1fr));
+  }
+}
