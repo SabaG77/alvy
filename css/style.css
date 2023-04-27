@@ -39,9 +39,10 @@ a {
 button {
   font-family: 'Roboto Mono', monospace;
 }
+
 /* v1.0.0 */ 
 .header {
-  z-index: 1;
+  z-index: 100;
   position: fixed;
   width: 100%; 
 }
@@ -287,3 +288,128 @@ button {
     grid-template-columns: repeat(auto-fill, minmax(153px, 1fr));
   }
 }
+/* v4.0.0 */
+.wrapper {
+  position: relative; 
+  max-width: var(--marginAuto);
+  margin: 0 auto;
+}
+.wrapper-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 1rem;
+}
+.wrapper-left img {
+  width: 100%;
+}
+.wrapper-right {
+  background-color: var(--transperWhite);
+  position: relative;
+  border-radius: 16px;
+  padding: 0 2rem;
+  margin-top: 5.5rem;
+}
+.wrapper-left {
+  margin-top: 5.5rem;
+  position: relative;
+} 
+.wrapper-title {
+  color: var(--whitish);
+    font-size: 3.5rem;
+    font-family: "Chillax";
+    text-transform: uppercase;
+}
+.sm-title {
+  margin-top: 4rem;
+  color: #f4f2ed;
+}
+.wrapper-info {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.wrapper-text {
+  color: #f4f2edb9;
+  font-size: 1.15rem;
+  font-family: "Chillax L";
+  max-width: 72%;
+  line-height: 1.5;
+  margin: 2rem 0 0 0;
+} 
+.wrapper-text-1 {
+  color: #f4f2edb9;
+  font-size: 1.15rem;
+  font-family: "Chillax L";
+  max-width: 72%;
+  line-height: 1.5;
+  padding: 0 3rem 0 0rem;
+  margin: 2rem 0 0 0;
+} 
+.wrapper-right-absolute {
+    position: absolute;
+    bottom: 10%;
+} 
+@media (max-width: 1550px) {
+  .wrapper-title {
+    font-size: 3rem;
+  }
+  .wrapper-text {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1490px) {
+  .delete {
+    display: none;
+  } 
+}
+@media (max-width: 1375px) {
+  .wrapper-title {
+    padding: 0 5rem 0 0;
+  }
+}
+@media (max-width: 1300px) {
+  .wrapper-text-1 {
+    display: none;
+  }
+  .wrapper-text {
+    max-width: 85%;
+  }
+}
+@media (max-width: 1235px) {
+  .sm-title {
+    display: none;
+  }
+}
+@media (max-width: 1090px) {
+  .wrapper-title {
+    font-size: 1.7rem;
+  }
+  .wrapper-text {
+    margin: 0rem 0 5rem 0;
+  }
+  .wrapper-right-absolute {
+    bottom: -9% !important;
+  }
+}   
+@media (max-width: 900px) {
+  .wrapper-top {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .wrapper-absolute {
+    position: initial;
+  }
+  .wrapper-title {
+    padding: 0 2rem 0 0;
+    line-height: 1.2;
+  }
+  .wrapper-left { 
+    grid-column: 1/3;
+    margin-top: 0;
+  }
+  .wrapper-right {
+    grid-column: 1/3;  
+    padding: 12rem 2rem;
+  }
+} 
+/*  */
