@@ -45,6 +45,7 @@ button {
   z-index: 100;
   position: fixed;
   width: 100%; 
+  background-color: #1a1a1a46;
 }
 .nav {
   display: flex;
@@ -412,4 +413,132 @@ button {
     padding: 12rem 2rem;
   }
 } 
-/*  */
+/* v6.0.0 */
+.sc {
+  position: relative; 
+  max-width: var(--marginAuto);
+  margin: 0 auto;
+}
+.sc-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 1rem;
+}
+.sc-left img {
+  width: 100%;
+}
+.sc-right {
+  background-color: var(--transperWhite);
+  position: relative;
+  border-radius: 16px;
+  padding: 0 2rem;
+  margin-top: 1.2rem; 
+}
+.sc-left {
+  margin-top:1.2rem; 
+  position: relative;
+}
+.sc-absolute {
+  position: absolute;
+  bottom: 10%;
+}
+.sc-title {
+  color: var(--whitish);
+    font-size: 3.4rem;
+    font-family: "Chillax";
+    text-transform: uppercase;
+}
+.sm-title {
+  margin-top: 4rem;
+  color: #f4f2ed;
+}
+.absolute-text {
+  color: #f4f2edb9;
+  font-size: 1.25rem;
+  font-family: "Chillax L";
+  max-width: 72%;
+  line-height: 1.5;
+  margin: 2rem 0 4rem 0;
+} 
+.arrow-svg {
+  background-color: var(--transperWhite);
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid #f7f6f4af;
+  padding: 1rem 1.03rem;
+  margin-right: 1rem;
+} 
+.story-btn {
+    color: #f4f2ed; 
+    opacity: .8;
+    display: flex;
+    align-items: center;
+}
+.story-btn:hover {
+  opacity: 1;
+}
+@media (max-width: 1550px) {
+  .sc-title {
+    font-size: 3rem;
+  }
+  .sc-text {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1375px) {
+  .absolute-title {
+    padding: 0 5rem 0 0;
+  }
+  .f-d {
+    display: none;
+  }
+}
+@media (max-width: 1235px) {
+  .sm-title {
+    display: none;
+  }
+}
+@media (max-width: 1090px) {
+  .sw {
+    bottom: 0%;
+  }
+}
+@media (max-width: 1080px) {
+  .absolute-title {
+    font-size: 1.7rem;
+  }
+  .absolute-text {
+    margin: 2rem 0 3rem 0;
+  }
+}  
+@media (max-width: 890px) {
+  .sc-top {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .sc-absolute {
+    position: initial;
+  }
+  .sc-title {
+    padding: 0 2rem 0 0;
+    line-height: 1.2;
+  }
+  .sc-left { 
+    grid-column: 1/3;
+  }
+  .sc-right {
+    grid-column: 1/3;
+    margin-top: 0;
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .sc-right .sc-text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 300px) {
+  .sc-title {
+    font-size: 1.4rem;
+  }
+}
